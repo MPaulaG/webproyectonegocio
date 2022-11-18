@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+
+{%load static%}
+
+{%block content%}
+ <br>
+    <!-- Revisar xq no sale la barra negra en el navbar -->
+ <br>
+ <br>
+    <!-- About Start -->
+    <div class="container-fluid mb-5 py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 px-0">
+                <img width="100%" class="img-fluid" src="{%static 'core/img/about2.jpg'%}" alt="Image">
+            </div>
+            <div class="col-lg-6 py-5 py-lg-0 px-3 px-lg-5">
+                <h5 class="text-primary mb-3">Nosotros</h5>
+                <h1 class="mb-4">5 años de experiencia</h1>
+                <p>Trabajamos con los más altos estándares de calidad</p>
+                <div class="row py-2">
+                    <div class="col-sm-6">
+                        <i class="flaticon-approved display-3 text-primary"></i>
+                        <h5 class="mt-2">Buenas Prácticas</h5>
+                        <p>Aplicamos buenas prácticas y los más altos principios éticos</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="flaticon-medal display-3 text-primary"></i>
+                        <h5 class="mt-2">Reconocimientos</h5>
+                        <p>Hemos sido reconocidos a nivel nacional e internacional por nuestro desempeño</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+{%endblock%}
+    <!-- Revisar xq no sale los derechos, politicas y terminos en el footer -->
