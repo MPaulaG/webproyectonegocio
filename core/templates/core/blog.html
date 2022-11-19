@@ -1,21 +1,21 @@
 {% extends 'core/base.html' %}
-
 {%load static%}
+{%block title%}Blog{%endblock%}
 
 {%block content%}
 
     <!-- Blog Start -->
     <div class="container pt-5">
         <div class="d-flex flex-column text-center mb-5">
-            <h5 class="text-primary mb-3">Recent Blog</h5>
-            <h1 class="m-0">Latest From Our Blog</h1>
+            <h5 class="text-primary mb-3">Blog</h5>
+            <h1 class="m-0">Actualizacion Tributaria</h1>
         </div>
         <div class="row pb-3">
             <div class="col-lg-4 mb-4">
                 <div class="card mb-2 p-3">
-                    <img class="card-img-top" src="{% static 'core/img/blog1.jpg' %}" alt="">
+                    <img class="card-img-top" src={{blog.image}}"{% static 'core/img/blog1.jpg' %}" alt="">
                     <div class="card-body bg-secondary d-flex align-items-center p-0">
-                        <h6 class="card-title text-white text-truncate m-0 ml-3">Boletin No.71-2022 Norma Regulatoria a Sujetos administrados por el SRI</h6>
+                        <h6 class="card-title text-white text-truncate m-0 ml-3">{{blog.title}}Boletin No.71-2022 Norma Regulatoria a Sujetos administrados por el SRI</h6>
                         <a href="" class="fa fa-link d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white text-decoration-none m-0 ml-auto" style="width: 45px; height: 45px;"></a>
                     </div>
                     <div class="card-footer py-3 px-4">
@@ -24,15 +24,15 @@
                             <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
                             <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
                         </div>
-                        <p class="m-0">Principales cambios normativos para la recaudacion y manejo de los impuestos administrados por el Servicio de Rentas Internas</p>
+                        <p class="m-0">{{blog.content}}Principales cambios normativos para la recaudacion y manejo de los impuestos administrados por el Servicio de Rentas Internas</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="card mb-2 p-3">
-                    <img class="card-img-top" src="{% static 'core/img/blog2.jpg' %}" alt="">
+                    <img class="card-img-top" src={{blog.image}}"{% static 'core/img/blog2.jpg' %}" alt="">
                     <div class="card-body bg-secondary d-flex align-items-center p-0">
-                        <h6 class="card-title text-white text-truncate m-0 ml-3">Boletin No.70-2022 </h6>
+                        <h6 class="card-title text-white text-truncate m-0 ml-3">{{blog.title}}Boletin No.70-2022 </h6>
                         <a href="" class="fa fa-link d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white text-decoration-none m-0 ml-auto" style="width: 45px; height: 45px;"></a>
                     </div>
                     <div class="card-footer py-3 px-4">
@@ -41,15 +41,15 @@
                             <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
                             <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
                         </div>
-                        <p class="m-0">Sujetos pasivos que ingresan tramites de pago indebido o en exceso.</p>
+                        <p class="m-0">{{blog.content}}Sujetos pasivos que ingresan tramites de pago indebido o en exceso.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="card mb-2 p-3">
-                    <img class="card-img-top" src="{% static 'core/img/blog3.jpg' %}" alt="">
+                    <img class="card-img-top" src={{blog.image}}"{% static 'core/img/blog3.jpg' %}" alt="">
                     <div class="card-body bg-secondary d-flex align-items-center p-0">
-                        <h6 class="card-title text-white text-truncate m-0 ml-3">Boletin No.69-2021</h6>
+                        <h6 class="card-title text-white text-truncate m-0 ml-3">{{blog.title}}Boletin No.69-2021</h6>
                         <a href="" class="fa fa-link d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white text-decoration-none m-0 ml-auto" style="width: 45px; height: 45px;"></a>
                     </div>
                     <div class="card-footer py-3 px-4">
@@ -58,7 +58,7 @@
                             <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
                             <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
                         </div>
-                        <p class="m-0">Instructivo para la aplicacion de la transaccion en materia tributaria.</p>
+                        <p class="m-0">{{blog.content}}Instructivo para la aplicacion de la transaccion en materia tributaria.</p>
                     </div>
                 </div>
             </div>

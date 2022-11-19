@@ -1,0 +1,93 @@
+{% extends 'core/base.html' %}
+{%load static%}
+{%block title%}Servicios{%endblock%}
+
+{%block content%}
+    <!-- Services Start -->
+    <div class="container pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h5 class="text-primary mb-3">Nuestros Servicios</h5>
+            <h1 class="m-0">Catálogo</h1>
+        </div>
+        {% for service in services %}
+        <div class="row pb-3">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card mb-2 p-3">
+                    <img class="card-img-top" src={{service.image.url}} alt="">
+                    <div class="card-body bg-secondary d-flex align-items-center p-0">
+                        <h3 class="flaticon-desk font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
+                        <h6 class="card-title text-white text-truncate m-0">{{service.title}}</h6>
+                    </div>
+                    <div class="card-footer">
+                        {{service.content}}
+                    </div>
+                </div>
+            </div>            
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid p-0">
+        <div class="container p-0 py-5">
+            <div class="d-flex flex-column text-center mb-5">
+                <h5 class="text-primary mb-3">Testimonios</h5>
+                <h1 class="m-0">Opinión de nuestros clientes</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item px-3">
+                    <div class="testimonial-text position-relative border bg-light mb-4 py-3 px-4">
+                        Excelente servicio!
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="img-thumbnail bg-light rounded-circle" src="{%static 'core/img/testimonial4.jpg' %}" style="width: 80px; height: 80px; padding: 12px;" alt="Image">
+                        <div class="pl-4">
+                            <h6 class="text-primary">Susana Diaz</h6>
+                            <p class="m-0">CHEVYCAR</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item px-3">
+                    <div class="testimonial-text position-relative border bg-light mb-4 py-3 px-4">
+                        Muy profesionales.
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="img-thumbnail bg-light rounded-circle" src="{%static 'core/img/testimonial-2.jpg' %}" style="width: 80px; height: 80px; padding: 12px;" alt="Image">
+                        <div class="pl-4">
+                            <h6 class="text-primary">Juan Carlos Zapata</h6>
+                            <p class="m-0">ESPE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item px-3">
+                    <div class="testimonial-text position-relative border bg-light mb-4 py-3 px-4">
+                        Excelente asesoría
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="img-thumbnail bg-light rounded-circle" src="{%static 'core/img/testimonial-3.jpg' %}" style="width: 80px; height: 80px; padding: 12px;" alt="Image">
+                        <div class="pl-4">
+                            <h6 class="text-primary">Ricardo Rea</h6>
+                            <p class="m-0">LAB CENTER</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item px-3">
+                    <div class="testimonial-text position-relative border bg-light mb-4 py-3 px-4">
+                        Confiables y muy profesionales
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <img class="img-thumbnail bg-light rounded-circle" src="{%static 'core/img/testimonial-1.jpg' %}" style="width: 80px; height: 80px; padding: 12px;" alt="Image">
+                        <div class="pl-4">
+                            <h6 class="text-primary">Shiang Zhen</h6>
+                            <p class="m-0">PETRO ORIENTAL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+{% endblock %}
