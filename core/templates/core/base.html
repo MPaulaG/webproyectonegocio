@@ -18,6 +18,9 @@
 
     <!-- Flaticon Font -->
     <link href="{% static 'core/lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
 
     <!-- Libraries Stylesheet -->
     <link href="{% static 'core/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
@@ -78,9 +81,13 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
-        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-0">
+   <!-- Navbar Start -->
+{%if request.path == '/'%}
+   <div class="container-fluid p-0 nav-bar">
+{%else%}
+    <div class="container-fluid p-0 mb-5">
+{%endif%}
+        <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-0">
             <a href="" class="navbar-brand d-block d-lg-none">
                 <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">GLA</span> Tax Solutions</h1>
             </a>
@@ -88,9 +95,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav m-auto py-4 {%if request.path == '/'%}>active {%endif%}">
-                    <a href="{%url 'home'%}" class="nav-item nav-link active">Inicio</a>
-                    <a href="{%url 'about'%}" class="nav-item nav-link">Acerca de</a>
+                <div class="navbar-nav m-auto py-4">
+                    <a href="{%url 'home'%}" class="nav-item nav-link">Inicio</a>
+                    <a href="{%url 'about'%}" class="nav-item nav-link active">Acerca de</a>
                     <a href="{%url 'services'%}" class="nav-item nav-link">Servicios</a>
                     <a href="{%url 'colaborators'%}" class="nav-item nav-link">Profesionales</a>
                     <a href="{%url 'blog'%}" class="nav-item nav-link">Blog</a>
@@ -100,6 +107,7 @@
         </nav>
     </div>
     <!-- Navbar End -->
+
 
     {%block content%}
     {%endblock%}
@@ -153,51 +161,61 @@
         <div class="row pt-5">
             <div class="col-lg-4 col-md-12 mb-5">
                 <h1 class="mb-3 display-5 text-capitalize font-italic text-white"><span class="text-primary">GLA</span>Tax Solutions</h1>
-                <p class="m-0">
-                Nuestro trabajo es especializado para obtener los mejores resultados y dar soluciones efectivas para nuestros clientes.
+                <p class="m-0">Nuestro trabajo es especializado para obtener los mejores resultados y dar soluciones efectivas para nuestros clientes.
                 <br>
                 Contamos con personal altamente calificado y con experiencia en instituciones privadas, públicas y organismos de control
                 </p>
             </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                       
+                    </div>
                     <div class="col-md-4 mb-5">
                         <h5 class="text-primary mb-4">Secciones</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Acerca de</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Profesionales</a>
-                            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contacto</a>
+                            <a class="text-white mb-2" href="{%url 'home'%}"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                            <a class="text-white mb-2" href="{%url 'about'%}"><i class="fa fa-angle-right mr-2"></i>Acerca de</a>
+                            <a class="text-white mb-2" href="{%url 'services'%}"><i class="fa fa-angle-right mr-2"></i>Servicios</a>
+                            <a class="text-white mb-2" href="{%url 'colaborators'%}"><i class="fa fa-angle-right mr-2"></i>Profesionales</a>
+                            <a class="text-white mb-2" href="{%url 'blog'%}"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                            <a class="text-white" href="{%url 'contact'%}"><i class="fa fa-angle-right mr-2"></i>Contacto</a>
                         </div>
                     </div>
                     <div class="col-md-4 mb-5">
                         <h5 class="text-primary mb-4">Contáctanos</h5>
                         <p><i class="fa fa-map-marker-alt mr-2"></i>Av. Alonso de Ángulo y Pedro de Alfaro</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+593 996703855</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+593 998870842</p>
                         <p><i class="fa fa-envelope mr-2"></i>lga.taxsolution@gmail.com</p>
                         <div class="d-flex justify-content-start mt-4">
-                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fab fa-whatsapp"></i></a>
-                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="#"><i class="fa fa-envelope"></i></a>
+                            {%if LINK_FACEBOOK %}
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="{{LINK_FACEBOOK}}"><i class="fab fa-facebook-f">
+                            </i></a>{%endif%}
+                            {%if LINK_WHATSAPP %}
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="{{LINK_WHATSAPP}}"><i class="fab fa-whatsapp"></i></a>
+                            {%endif%}
+                            {%if LINK_GMAIL %}
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 40px; height: 40px;" href="{{LINK_GMAIL}}"><i class="fa fa-envelope"></i></a>
+                            {%endif%}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Revisar xq no sale los derechos, politicas y terminos en el footer -->
         <div class="row pt-3">
             <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
                 <p class="m-0 text-white">
-                    &copy; <a class="text-white font-weight-bold" href="#">@GLA Tax Solutions</a>. Derechos reservados. Diseñado por
+                    &copy; <a class="text-white font-weight-bold" href="#">GLA Tax Solutions</a>. Todos los derechos reservados. Diseñado por:
                     <a class="text-white font-weight-bold" href="https://htmlcodex.com">Paula Guerrero</a>
                 </p>
             </div>
             <div class="col-md-6 text-center text-md-right">
                 <ul class="nav d-inline-flex">
                     <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Políticas</a>
+                        <a class="nav-link text-white py-0" href="#">Privacidad</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Términos y Condiciones</a>
+                        <a class="nav-link text-white py-0" href="#">Terminos y Condiciones</a>
                     </li>
                 </ul>
             </div>

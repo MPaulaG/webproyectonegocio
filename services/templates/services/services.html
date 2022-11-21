@@ -9,13 +9,13 @@
             <h5 class="text-primary mb-3">Nuestros Servicios</h5>
             <h1 class="m-0">Catálogo</h1>
         </div>
-        {% for service in services %}
         <div class="row pb-3">
+        {% for service in services %}
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card mb-2 p-3">
                     <img class="card-img-top" src={{service.image.url}} alt="">
                     <div class="card-body bg-secondary d-flex align-items-center p-0">
-                        <h3 class="flaticon-desk font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
+                        <h3 class="flaticon-desk font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 " style="width: 45px; height: 45px;"></h3>
                         <h6 class="card-title text-white text-truncate m-0">{{service.title}}</h6>
                     </div>
                     <div class="card-footer">
@@ -23,8 +23,8 @@
                     </div>
                 </div>
             </div>            
-        </div>
         {% endfor %}
+        </div>
     </div>
     <!-- Services End -->
 

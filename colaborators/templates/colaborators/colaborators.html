@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{%load static%}
+{%block title%}Profesionales{%endblock%}
+
+{%block content%}
+ <br>
+ 
+    <!-- Team Start -->
+    <div class="container pt-5 pb-3">
+        <div class="d-flex flex-column text-center mb-5">
+            <h5 class="text-primary mb-3">Nuestro Equipo</h5>
+            <h1 class="m-0">Conoce a nuestros profesionales</h1>
+        </div>
+        
+        <div class="row">
+        {% for colaborator in colaborators %}
+            <div class="col-lg-6 mb-4">
+                <div class="row mb-2 align-items-center">
+                    <div class="col-6 text-right">
+                        <h6>{{colaborator.name}}</h6>
+                        <h6 class="text-muted font-weight-normal text-capitalize mb-2">{{colaborator.title}}</h6>
+                        <p>{{colaborator.description}}</p>
+                        <div class="d-flex justify-content-end">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <img class="img-thumbnail p-3" src={{colaborator.image.url}} alt="Image">
+                    </div>
+                </div>
+                </div>
+                {% endfor %}
+        </div>
+            
+    </div>
+
+    <!-- Team End -->
+{%endblock%}
+
+   

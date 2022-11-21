@@ -11,7 +11,7 @@ class Social(models.Model):
 
     class Meta:
         verbose_name="red social"
-        verbose_name_plural="redes sociales"
+        verbose_name_plural="Redes Sociales"
         ordering=['name']
 
     def __str__(self):

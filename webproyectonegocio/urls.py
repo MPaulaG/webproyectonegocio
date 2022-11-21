@@ -24,6 +24,8 @@ urlpatterns = [
     path('services/',include('services.urls')),
     #urls-blog
     path('blog/',include('blog.urls')),
+    #urls-colaborators
+    path('colaborators/',include('colaborators.urls')),
     #urls-admin
     path('admin/', admin.site.urls),
 ]

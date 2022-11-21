@@ -5,4 +5,4 @@ from .models import Blog
 
 def blog(request):
     blogs= Blog.objects.all()
-    return render (request, "core/blog.html",{'blogs':blogs})
+    return render (request, "blog/blog.html",{'blogs':blogs})

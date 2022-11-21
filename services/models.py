@@ -19,17 +19,3 @@ class Service(models.Model):
         return self.title
 
 
-class Testimony(models.Model):
-    opinion=models.TextField(verbose_name="Opinion")
-    name=models.CharField(max_length=50, verbose_name="Nombre")
-    business=models.CharField(max_length=200, verbose_name="Empresa")
-    created=models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creacion")
-    updated=models.DateTimeField(auto_now=True, verbose_name="Fecha de actualizacion")
-
-    class Meta:
-        verbose_name="testimonio"
-        verbose_name_plural="testimonios"
-        ordering=['-created']
-    
-    def __str__(self):
-        return self.business

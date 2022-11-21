@@ -1,16 +1,13 @@
 from django.shortcuts import render
 
-
 # Create your views here.
-
 def home(request):
-    return render (request, "core/home.html")
+    return render(request,"core/home.html")
 
 def about(request):
-    return render (request, "core/about.html")
-
-def colaborators(request):
-    return render (request, "core/colaborators.html")
+    return render(request,"core/about.html")
 
 def contact(request):
-    return render (request, "core/contact.html")
+    return render(request,"core/contact.html")
+
+
