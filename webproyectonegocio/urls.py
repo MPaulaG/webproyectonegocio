@@ -26,6 +26,8 @@ urlpatterns = [
     path('blog/',include('blog.urls')),
     #urls-colaborators
     path('colaborators/',include('colaborators.urls')),
+    #urls-contact
+    path('contact/',include('contact.urls')),
     #urls-admin
     path('admin/', admin.site.urls),
 ]

@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'blog',
     'colaborators',
     'social',
-  
+    'contact'
 ]
 
 MIDDLEWARE = [
@@ -132,3 +132,8 @@ MEDIA_ROOT=os.path.join(BASE_DIR)
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'dc03e6206459a8'
+EMAIL_HOST_PASSWORD = 'e36656cb912cc3'
+EMAIL_PORT = '2525'
